@@ -7,6 +7,6 @@ box-sizing:border-box;
 .app{
 display:flex;
 justify-content:center;
-background:#f5f8fa;
+background:#000203;
 height:100vh;
 }

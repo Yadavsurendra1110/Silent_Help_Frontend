@@ -1,6 +1,7 @@
 .feed{
-  width:500px;
-  border-right:1px solid #333;
+flex:1;
+padding:20px;
+border-right:1px solid #ddd;
 }
 
 .feed h2{
