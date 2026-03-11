@@ -1,0 +1,13 @@
+.rightbar{
+  width:300px;
+  padding:20px;
+}
+
+.rightbar p{
+  margin:10px 0;
+  cursor:pointer;
+}
+
+.rightbar p:hover{
+  color:#1DA1F2;
+}
