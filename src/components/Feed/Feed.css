@@ -1,10 +1,21 @@
-.feed{
-flex:1;
-padding:20px;
-border-right:1px solid #ddd;
+
+.feed {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px 40px 16px;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  min-height: 100vh;
 }
 
-.feed h2{
-  padding:15px;
-  border-bottom:1px solid #333;
+.feed h2 {
+  padding: 0 0 18px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 600px;
 }

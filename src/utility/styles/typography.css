@@ -1,0 +1,22 @@
+/*
+  typography.css
+  Shared typography styles for headings, text, etc.
+*/
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+.subheading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.text-main {
+  color: var(--text-main);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}

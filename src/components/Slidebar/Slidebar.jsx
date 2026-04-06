@@ -2,10 +2,8 @@ import "./Slidebar.css"
 
 function Sidebar() {
   return (
-    <div className="sidebar">
-
+    <aside className="sidebar">
       <h2 className="logo">Silent Help</h2>
-
       <ul>
         <li>Home</li>
         <li>All Problems</li>
@@ -13,11 +11,9 @@ function Sidebar() {
         <li>Notifications</li>
         <li>Profile</li>
       </ul>
-
-      <button className="postBtn">Post Problem</button>
-
-    </div>
-  )
+      <button className="postBtn btn">Post Problem</button>
+    </aside>
+  );
 }
 
 export default Sidebar

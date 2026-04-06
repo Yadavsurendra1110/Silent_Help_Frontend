@@ -1,0 +1,22 @@
+/*
+  layout.css
+  Shared layout classes for containers, cards, etc.
+*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+.divider {
+  border-bottom: 1px solid var(--border);
+  margin: 16px 0;
+}

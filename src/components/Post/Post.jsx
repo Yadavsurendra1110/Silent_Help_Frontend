@@ -2,17 +2,14 @@ import "./Post.css"
 
 function Post({ name, message }) {
   return (
-    <div className="post">
-
+    <section className="post card">
       <div className="avatar"></div>
-
       <div className="postContent">
         <h4>{name}</h4>
         <p>{message}</p>
       </div>
-
-    </div>
-  )
+    </section>
+  );
 }
 
 export default Post

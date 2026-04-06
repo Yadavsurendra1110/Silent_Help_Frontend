@@ -1,0 +1,18 @@
+/*
+  variables.css
+  Centralized CSS variables for colors, spacing, fonts, etc.
+*/
+:root {
+  --primary-bg: #181a20;
+  --secondary-bg: #23272f;
+  --accent: #1da1f2;
+  --border: #2c2f36;
+  --text-main: #f5f6fa;
+  --text-secondary: #b2becd;
+  --card-bg: #22242b;
+  --sidebar-width: 260px;
+  --rightbar-width: 320px;
+  --radius: 18px;
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+  --shadow: 0 2px 12px 0 rgba(0,0,0,0.12);
+}

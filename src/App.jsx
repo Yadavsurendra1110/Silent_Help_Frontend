@@ -1,14 +1,15 @@
-import './App.css'
-import Sidebar from './components/Slidebar/Slidebar'
-import Feed from './components/Feed/Feed'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
-    <div className="app">
-      <Sidebar />
-      <Feed />
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

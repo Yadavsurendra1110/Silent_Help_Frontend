@@ -2,16 +2,13 @@ import "./Rightbar.css"
 
 function Rightbar() {
   return (
-    <div className="rightbar">
-
+    <aside className="rightbar">
       <h3>Trending</h3>
-
       <p>#Accessibility</p>
       <p>#SilentHelp</p>
       <p>#AssistiveTech</p>
-
-    </div>
-  )
+    </aside>
+  );
 }
 
 export default Rightbar
