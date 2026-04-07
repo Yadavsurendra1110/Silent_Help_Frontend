@@ -1,0 +1,200 @@
+/* Profile page */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Profile card */
+.profile-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.profile-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  border: 3px solid var(--accent-light);
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.profile-edit-btn {
+  width: 28px; height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 14px;
+  color: var(--text-secondary);
+}
+.profile-edit-btn:hover { background: var(--accent-light); color: var(--accent); }
+
+.profile-edit-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.profile-edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.profile-role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.profile-role-badge.student { background: #FFF3E0; color: #E65100; }
+.profile-role-badge.admin   { background: #E8EAF6; color: #3949AB; }
+
+.profile-detail {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 4px 0 0;
+}
+
+.profile-settings-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent);
+  white-space: nowrap;
+}
+.profile-settings-link:hover { background: var(--accent-light); }
+
+/* Stats */
+.profile-stats {
+  display: flex;
+  gap: 32px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  margin-bottom: 16px;
+}
+
+.profile-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.profile-create-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* Tabs */
+.profile-tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 6px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.profile-tab {
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition);
+}
+.profile-tab:hover { background: var(--input-bg); color: var(--text-main); }
+.profile-tab.active { background: var(--accent); color: #fff; }
+
+/* Content */
+.profile-content { display: flex; flex-direction: column; gap: 12px; }
+
+.profile-empty {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.profile-overview {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+.profile-overview h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.profile-overview-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.profile-loading, .profile-notfound {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 300px;
+  color: var(--text-secondary);
+}

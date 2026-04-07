@@ -1,28 +1,76 @@
 /*
-  buttons.css
-  Shared button styles for the app
+  buttons.css — Shared button styles
 */
 .btn {
-  padding: 0.7em 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.55em 1.4em;
   border: none;
-  border-radius: var(--radius);
+  border-radius: var(--radius-md);
   background: var(--accent);
-  color: #fff;
-  font-size: 1rem;
+  color: var(--text-white);
+  font-size: var(--text-base);
   font-weight: 600;
   cursor: pointer;
-  transition: background var(--transition), box-shadow var(--transition);
-  box-shadow: var(--shadow);
+  transition: background var(--transition), opacity var(--transition), transform var(--transition);
+  white-space: nowrap;
 }
-.btn:hover, .btn:focus {
-  background: #1484b8;
-  outline: none;
+
+.btn:hover {
+  background: var(--accent-hover);
 }
-.btn-secondary {
-  background: var(--secondary-bg);
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--accent);
   color: var(--accent);
 }
-.btn-secondary:hover {
-  background: var(--accent);
-  color: #fff;
+
+.btn-outline:hover {
+  background: var(--accent-light);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+}
+
+.btn-ghost:hover {
+  background: var(--border);
+  color: var(--text-main);
+}
+
+.btn-danger {
+  background: var(--error);
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+.btn-sm {
+  padding: 0.35em 0.9em;
+  font-size: var(--text-sm);
+}
+
+.btn-lg {
+  padding: 0.8em 2em;
+  font-size: var(--text-lg);
+  border-radius: var(--radius-lg);
+}
+
+.btn-full {
+  width: 100%;
 }

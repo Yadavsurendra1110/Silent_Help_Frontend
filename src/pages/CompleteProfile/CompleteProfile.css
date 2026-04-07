@@ -1,0 +1,151 @@
+/* CompleteProfile page */
+.cp-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-bg);
+    padding: 24px 16px;
+}
+
+.cp-card {
+    width: 100%;
+    max-width: 660px;
+    background: var(--card-bg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: 40px;
+}
+
+/* Header */
+.cp-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.cp-logo {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.cp-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 8px;
+}
+
+.cp-header p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0 0 14px;
+    line-height: 1.5;
+}
+
+.cp-role-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cp-role-badge.student {
+    background: #FFF3E0;
+    color: #E65100;
+}
+
+.cp-role-badge.admin {
+    background: #E8EAF6;
+    color: #3949AB;
+}
+
+/* Form */
+.cp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.cp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cp-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.cp-field input,
+.cp-field select {
+    padding: 10px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    background: var(--input-bg);
+    color: var(--text-main);
+    transition: border-color var(--transition);
+    outline: none;
+}
+
+.cp-field input:focus,
+.cp-field select:focus {
+    border-color: var(--accent);
+    background: #fff;
+}
+
+.cp-field input:disabled {
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+/* Notice */
+.cp-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--accent-light);
+    border: 1px solid #F5C6C6;
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+}
+
+.cp-notice span {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cp-notice p {
+    font-size: 13px;
+    color: var(--accent-dark);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Submit button */
+.cp-submit {
+    margin-top: 6px;
+    padding: 13px;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cp-card {
+        padding: 28px 20px;
+    }
+
+    .cp-row {
+        grid-template-columns: 1fr;
+    }
+}

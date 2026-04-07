@@ -1,54 +1,67 @@
-.sidebar {
+/* Slidebar (left navigation sidebar) */
+.slidebar {
   width: var(--sidebar-width);
-  padding: 32px 20px 20px 20px;
+  background: var(--sidebar-bg);
   border-right: 1px solid var(--border);
-  background: var(--secondary-bg);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  padding: 12px 0;
+  position: sticky;
+  top: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 36px;
-  letter-spacing: 1px;
+.slidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 10px;
+  flex: 1;
 }
 
-.sidebar ul {
-  list-style: none;
-  width: 100%;
-  margin-bottom: 32px;
-}
-
-.sidebar li {
-  padding: 14px 0 14px 8px;
-  font-size: 1.13rem;
+.slidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
   color: var(--text-main);
-  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
   transition: background var(--transition), color var(--transition);
 }
-.sidebar li:hover {
+.slidebar-item:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+  text-decoration: none;
+}
+.slidebar-item.active {
   background: var(--accent);
   color: #fff;
 }
+.slidebar-item.active .slidebar-icon { color: #fff; }
 
-.postBtn {
-  margin-top: 10px;
-  width: 100%;
-  font-size: 1.08rem;
-  font-weight: 600;
-  border-radius: var(--radius);
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 12px 0;
-  box-shadow: var(--shadow);
-  transition: background var(--transition);
+.slidebar-icon {
+  font-size: 20px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: color var(--transition);
 }
-.postBtn:hover {
-  background: #1484b8;
+.slidebar-item:hover .slidebar-icon { color: var(--accent); }
+.slidebar-item.active .slidebar-icon { color: #fff; }
+
+.slidebar-create-btn {
+  margin: 16px 14px 8px;
+  width: calc(100% - 28px);
+  font-size: 14px;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
