@@ -51,13 +51,13 @@
 }
 
 .cp-role-badge.student {
-    background: #FFF3E0;
-    color: #E65100;
+    background: var(--accent-light);
+    color: var(--accent-dark);
 }
 
 .cp-role-badge.admin {
-    background: #E8EAF6;
-    color: #3949AB;
+    background: var(--info);
+    color: #FFFFFF;
 }
 
 /* Form */
@@ -100,7 +100,7 @@
 .cp-field input:focus,
 .cp-field select:focus {
     border-color: var(--accent);
-    background: #fff;
+    background: var(--card-bg);
 }
 
 .cp-field input:disabled {
@@ -114,7 +114,7 @@
     align-items: flex-start;
     gap: 10px;
     background: var(--accent-light);
-    border: 1px solid #F5C6C6;
+    border: 1px solid var(--accent);
     border-radius: var(--radius-md);
     padding: 12px 16px;
 }

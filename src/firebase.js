@@ -17,11 +17,12 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
-// Restrict sign-in to the college's Google Workspace domain
-// e.g. "yourcollegename.edu.in" — change this in .env
-const allowedDomain = import.meta.env.VITE_COLLEGE_EMAIL_DOMAIN;
-if (allowedDomain) {
-    googleProvider.setCustomParameters({ hd: allowedDomain });
-}
+// Domain restriction removed - any Google account allowed
+// const allowedDomain = import.meta.env.VITE_COLLEGE_EMAIL_DOMAIN || '';
+// if (allowedDomain) {
+//     googleProvider.setCustomParameters({ hd: allowedDomain });
+// }
+
 
 export default app;
+

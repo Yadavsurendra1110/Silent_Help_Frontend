@@ -15,6 +15,7 @@ function Login() {
     setLoading(true);
     try {
       const user = await loginWithGoogle(role);
+      console.log(18, user)
       if (!user.isProfileComplete) {
         navigate("/complete-profile", { replace: true });
       } else {

@@ -54,14 +54,15 @@ function Feed({ activeCategory = "", searchQuery = "" }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory, searchQuery]);
 
-  const handleVote = async (postId, type) => {
+  const handleRate = async (postId, rating) => {
     try {
-      const res = await api.post(`/posts/${postId}/vote`, { type });
+      const res = await api.post(`/posts/${postId}/rate`, { rating });
       setPosts((prev) =>
-        prev.map((p) => (p._id === postId ? { ...p, ...res.data.post } : p))
+        prev.map((p) => (p._id === postId ? { ...p, averageRating: res.data.averageRating, ratingCount: res.data.ratingCount } : p))
       );
     } catch { }
   };
+
 
   const handleDelete = (postId) => {
     setPosts((prev) => prev.filter((p) => p._id !== postId));
@@ -97,7 +98,8 @@ function Feed({ activeCategory = "", searchQuery = "" }) {
 
       <div className="feed-list">
         {posts.map((post) => (
-          <Post key={post._id} post={post} onVote={handleVote} onDelete={handleDelete} />
+        <Post key={post._id} post={post} onRate={handleRate} onDelete={handleDelete} />
+
         ))}
       </div>
 

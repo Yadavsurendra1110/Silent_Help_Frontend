@@ -163,4 +163,4 @@
 }
 .post-menu-item:hover { background: var(--input-bg); }
 .post-menu-item.danger { color: var(--error); }
-.post-menu-item.danger:hover { background: #FFF0EE; }
+.post-menu-item.danger:hover { background: var(--accent-light); }

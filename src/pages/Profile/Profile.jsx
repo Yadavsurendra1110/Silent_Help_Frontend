@@ -1,5 +1,5 @@
 // pages/Profile/Profile.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { IoPencilOutline, IoAddOutline } from "react-icons/io5";
 import { useAuth } from "../../context/AuthContext";
@@ -21,6 +21,8 @@ function Profile() {
     const [loading, setLoading] = useState(true);
     const [editMode, setEditMode] = useState(false);
     const [editName, setEditName] = useState("");
+
+    const postsWithComments = useMemo(() => posts.filter(p => (p.commentCount ?? 0) > 0), [posts]);
 
     useEffect(() => {
         const uid = id || currentUser?._id;
@@ -183,7 +185,14 @@ function Profile() {
                         </p>
                     </div>
                 )}
-                {(activeTab === "Comments" || activeTab === "Upvoted" || activeTab === "Downvoted") && (
+                {activeTab === "Comments" && (
+                    postsWithComments.length === 0
+                        ? <p className="profile-empty">No posts with comments yet.</p>
+                        : postsWithComments.map((p) => (
+                            <Post key={p._id} post={p} onVote={handleVote} onDelete={handleDelete} />
+                        ))
+                )}
+                {(activeTab === "Upvoted" || activeTab === "Downvoted") && (
                     <p className="profile-empty">Nothing to show here yet.</p>
                 )}
             </div>
@@ -192,3 +201,4 @@ function Profile() {
 }
 
 export default Profile;
+

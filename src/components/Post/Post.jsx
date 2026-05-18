@@ -27,8 +27,9 @@ function Post({ post, onVote, onDelete }) {
   const [shareMsg, setShareMsg] = useState(false);
 
   const userId = currentUser?._id;
-  const upvoted = post.upvotes?.includes(userId);
-  const downvoted = post.downvotes?.includes(userId);
+  const avgRating = post.averageRating || 0;
+  const ratingCount = post.ratingCount || 0;
+  const userRating = post.ratings?.find(r => r.user === userId)?.rating || 0;
 
   // ── Delete post ──────────────────────────────────────────────────────────
   const handleDelete = async () => {
@@ -120,21 +121,17 @@ function Post({ post, onVote, onDelete }) {
 
       {/* Footer actions */}
       <div className="post-actions">
-        <button
-          className={`post-action-btn ${upvoted ? "active" : ""}`}
-          onClick={() => onVote?.(post._id, "upvote")}
-        >
-          {upvoted ? <IoThumbsUp /> : <IoThumbsUpOutline />}
-          <span>{post.upvotes?.length ?? 0}</span>
-        </button>
-
-        <button
-          className={`post-action-btn ${downvoted ? "active down" : ""}`}
-          onClick={() => onVote?.(post._id, "downvote")}
-        >
-          {downvoted ? <IoThumbsDown /> : <IoThumbsDownOutline />}
-          <span>{post.downvotes?.length ?? 0}</span>
-        </button>
+        <div className="rating-stars">
+{[1,2,3,4,5].map((star) => (
+            <div
+              key={star}
+              className={`rating-star ${star <= Math.floor(avgRating) || (star <= userRating ? 'filled' : '') ? 'filled' : ''}`}
+              onClick={() => onRate && onRate(post._id, star)}
+              title={`${avgRating.toFixed(1)} average (${ratingCount} ratings)`}
+            />
+          ))}
+          <span className="rating-text">{avgRating.toFixed(1)} ({ratingCount})</span>
+        </div>
 
         <Link to={`/post/${post._id}`} className="post-action-btn">
           <IoChatbubbleOutline />

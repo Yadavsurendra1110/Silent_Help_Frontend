@@ -1,5 +1,9 @@
 /* Feed */
-.feed { display: flex; flex-direction: column; gap: 0; }
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 
 .feed-header {
   display: flex;
@@ -7,33 +11,53 @@
   justify-content: space-between;
   margin-bottom: 16px;
 }
+
 .feed-title {
   font-size: 20px;
   font-weight: 700;
   color: var(--text-main);
 }
+
 .feed-refresh {
-  width: 34px; height: 34px;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-full);
   font-size: 18px;
-  display: flex; align-items: center; justify-content: center;
-  background: transparent; border: none; cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   color: var(--text-secondary);
 }
-.feed-refresh:hover { background: var(--border); color: var(--text-main); }
 
-.feed-list { display: flex; flex-direction: column; gap: 12px; }
+.feed-refresh:hover {
+  background: var(--border);
+  color: var(--text-main);
+}
+
+.feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 .feed-empty {
   text-align: center;
   padding: 60px 20px;
   color: var(--text-secondary);
 }
-.feed-empty span { font-size: 40px; display: block; margin-bottom: 12px; }
+
+.feed-empty span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+}
 
 .feed-error {
-  background: #FFF0EE;
-  border: 1px solid #FFCCBC;
+  background: var(--accent-light);
+  border: 1px solid var(--accent);
   border-radius: var(--radius-md);
   padding: 14px;
   color: var(--error);
@@ -43,21 +67,37 @@
   margin-bottom: 12px;
   font-size: 14px;
 }
+
 .feed-error button {
-  background: var(--error); color: #fff;
-  border: none; border-radius: var(--radius-sm);
-  padding: 5px 12px; cursor: pointer; font-size: 13px;
+  background: var(--error);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  cursor: pointer;
+  font-size: 13px;
 }
 
-.feed-loading { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.feed-loading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
 .post-skeleton {
   height: 160px;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background: linear-gradient(90deg, var(--input-bg) 25%, var(--border) 50%, var(--input-bg) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite;
   border-radius: var(--radius-lg);
 }
-@keyframes shimmer { to { background-position: -200% 0; } }
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
 
 .feed-load-more {
   margin: 16px auto 0;

@@ -52,7 +52,7 @@
 
 .navbar-search:focus-within {
     border-color: var(--accent);
-    background: #fff;
+    background: var(--card-bg);
 }
 
 .search-icon {
@@ -183,7 +183,7 @@
 }
 
 .nav-dropdown-item.danger:hover {
-    background: #FFF0EE;
+  background: var(--accent-light);
 }
 
 /* Log out button (always visible on desktop) */

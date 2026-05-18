@@ -21,6 +21,7 @@ function PublicRoute({ children }) {
   const { currentUser, loading } = useAuth();
   if (loading) return <div className="flex-center" style={{ height: "100vh" }}><div className="spinner" /></div>;
   return currentUser ? <Navigate to="/" replace /> : children;
+
 }
 
 // Require auth for all protected routes
@@ -142,7 +143,7 @@ function App() {
           closeOnClick
           draggable
           pauseOnHover
-          theme="light"
+          theme="dark"
         />
       </AuthProvider>
     </BrowserRouter>

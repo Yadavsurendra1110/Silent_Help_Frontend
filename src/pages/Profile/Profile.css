@@ -44,15 +44,23 @@
 }
 
 .profile-edit-btn {
-  width: 28px; height: 28px;
+  width: 28px;
+  height: 28px;
   border-radius: var(--radius-full);
   background: var(--input-bg);
   border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
   color: var(--text-secondary);
 }
-.profile-edit-btn:hover { background: var(--accent-light); color: var(--accent); }
+
+.profile-edit-btn:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
 
 .profile-edit-row {
   display: flex;
@@ -79,8 +87,16 @@
   font-weight: 600;
   margin-bottom: 6px;
 }
-.profile-role-badge.student { background: #FFF3E0; color: #E65100; }
-.profile-role-badge.admin   { background: #E8EAF6; color: #3949AB; }
+
+.profile-role-badge.student {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+}
+
+.profile-role-badge.admin {
+  background: var(--info);
+  color: #FFFFFF;
+}
 
 .profile-detail {
   font-size: 13px;
@@ -100,7 +116,10 @@
   border: 1px solid var(--accent);
   white-space: nowrap;
 }
-.profile-settings-link:hover { background: var(--accent-light); }
+
+.profile-settings-link:hover {
+  background: var(--accent-light);
+}
 
 /* Stats */
 .profile-stats {
@@ -160,11 +179,23 @@
   white-space: nowrap;
   transition: background var(--transition), color var(--transition);
 }
-.profile-tab:hover { background: var(--input-bg); color: var(--text-main); }
-.profile-tab.active { background: var(--accent); color: #fff; }
+
+.profile-tab:hover {
+  background: var(--input-bg);
+  color: var(--text-main);
+}
+
+.profile-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
 
 /* Content */
-.profile-content { display: flex; flex-direction: column; gap: 12px; }
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 .profile-empty {
   text-align: center;
@@ -181,11 +212,13 @@
   padding: 20px;
   border: 1px solid var(--border);
 }
+
 .profile-overview h4 {
   font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
 }
+
 .profile-overview-text {
   font-size: 14px;
   color: var(--text-secondary);
@@ -193,8 +226,11 @@
   margin: 0;
 }
 
-.profile-loading, .profile-notfound {
-  display: flex; align-items: center; justify-content: center;
+.profile-loading,
+.profile-notfound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 300px;
   color: var(--text-secondary);
 }
